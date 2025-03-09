@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        .register-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group .verify-btn {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group .verify-btn:hover {
+            background-color: #45a049;
+        }
+        .terms-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .terms-group input {
+            margin-right: 10px;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-form">
+    <h2>新用户注册</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+            <span></span>
+        </div>
+        <div class="form-group">
+            <label for="phone">手机号</label>
+            <input type="tel" id="phone" name="phone" placeholder="输入手机号码" required>
+            <span></span>
+        </div>
+        <div class="form-group">
+            <label for="verification">短信验证码</label>
+            <input type="text" id="verification" name="verification" placeholder="请输入验证码" required>
+            <button type="button" class="verify-btn">发送验证码</button>
+            <span></span>
+        </div>
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" placeholder="设置6至20位字符，数字和字母组合" required>
+            <span></span>
+          </div>
+        <div class="form-group">
+            <label for="confirm-password">确认密码</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="请再次输入上面的密码" required>
+            <span></span>
+          </div>
+        <div class="terms-group">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">已阅读并同意 <a href="#">《用户服务协议》</a></label>
+        </div>
+        <button type="submit" class="register-btn">下一步</button>
+    </form>
+</div>
+<script>
+  const code = document.querySelector('.verify-btn')
+  const username = document.querySelector('#username')
+  const phone = document.querySelector('#phone')
+  const password = document.querySelector('#password')
+  const verify = document.querySelector('#verification')
+  const confirmpw = document.querySelector('#confirm-password')
+  const submit = document.querySelector('[type="submit"]')
+  
+
+  const confirmspan = confirmpw.nextElementSibling
+  const verifyspan = code.nextElementSibling
+  const passwordspan = password.nextElementSibling
+  const phonespan = phone.nextElementSibling
+  const userspan = username.nextElementSibling
+  let flag = true
+
+  submit.addEventListener('click', function(e){
+    if (!verifyUsername() || !verifyPhone() || !verifyPassword() || !confirmPassword() || !verifyCode()){
+      e.preventDefault()
+    }
+  })
+  function verifyUsername(){
+    const reg = /^[a-zA-Z0-9_-]{6,10}$/
+    if(reg.test(username.value)){
+      userspan.innerHTML = '用户名合法'
+      userspan.style.color = 'green'
+      return true
+    }else{
+      userspan.innerHTML = '用户名不合法'
+      userspan.style.color = 'red'
+      return false
+    }
+    }
+  username.addEventListener('change',verifyUsername)
+
+  function verifyPhone(){
+    const reg = /^1[0-9]{10}$/
+    if(reg.test(phone.value)){
+      phonespan.innerHTML = '手机号合法'
+      phonespan.style.color = 'green'
+      return true
+    }else{
+      phonespan.innerHTML = '手机号不合法'
+      phonespan.style.color = 'red'
+      return false
+    }
+  }
+  phone.addEventListener('change',verifyPhone)
+
+  function verifyPassword(){
+    const reg = /^[a-zA-Z]\w{5,17}$/
+    if(reg.test(password.value)){
+      passwordspan.innerHTML = '密码合法'
+      passwordspan.style.color = 'green'
+      return true
+    }else{
+      passwordspan.innerHTML = '密码不合法'
+      passwordspan.style.color = 'red'
+      return false
+    }
+  }
+  password.addEventListener('change',verifyPassword)
+
+  function confirmPassword(){
+    if(password.value === confirmpw.value){
+      confirmspan.innerHTML = '两次密码一致'
+      confirmspan.style.color = 'green'
+      return true
+    }else{
+      confirmspan.innerHTML = '两次密码不一致'
+      confirmspan.style.color = 'red'
+      return false
+    }
+  }
+  confirmpw.addEventListener('change',confirmPassword)
+
+  function verifyCode(){
+    const reg = /^[0-9]{4}$/
+    if(reg.test(verify.value)){
+      verifyspan.innerHTML = '验证码合法'
+      verifyspan.style.color = 'green'
+      return true
+    }else{
+      verifyspan.innerHTML = '验证码不合法'
+      verifyspan.style.color = 'red'
+    }
+  }
+  verify.addEventListener('change',verifyCode)
+
+  code.addEventListener('click', function(){
+    if (flag) {
+      let i = 5
+      flag = false
+      code.innerHTML = `${i}秒后重新获取`
+      let timer = setInterval(function(){
+      code.innerHTML = `${--i}秒后重新获取`
+      if (i === 0) {
+        clearInterval(timer)
+        code.innerHTML = '重新获取'
+        flag = true
+      }
+    }, 1000)
+    }
+  })
+  
+</script>
+</body>
+</html>
