@@ -1,0 +1,373 @@
+/* 版心居中 */
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+/* 头部 */
+.header {
+  height: 100px;
+  background-color: #fff;
+}
+
+.header .wrapper {
+  display: flex;
+  padding-top: 29px;
+}
+
+/* logo */
+.logo a {
+  display: block;
+  width: 199px;
+  height: 49px;
+  background-image: url(https://olin-yi.github.io/img/logo.jpg);
+  font-size: 0;
+}
+
+/* 导航栏 */
+.header .nav {
+  margin-left: 102px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 24px;
+}
+
+.nav li a {
+  display: inline-block;
+  padding: 6px 8px;
+  line-height: 27px;
+  font-size: 19px;
+}
+
+.nav .active,
+.nav a:hover {
+  border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索框 */
+.header .search {
+  display: flex;
+  margin-left: 64px;
+  padding: 0 12px 0 19px;
+  width: 412px;
+  height: 40px;
+  background-color: #f3f5f7;
+  border-radius: 20px;
+}
+
+.search input {
+  flex: 1;
+  /* 去除边框线 */
+  border: 0;
+  background-color: transparent;
+  /* 去除表单控件的焦点框 */
+  outline: none;
+}
+
+.search input::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 父级用flex布局，子元素变弹性盒子，宽高设置生效 */
+.search a {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/图片.png);
+  background-size: cover;
+
+}
+
+/* 用户 */
+.header .user {
+  margin-top: 4px;
+  margin-left: 32px;
+}
+
+/* .user a {
+  display: flex;
+  align-items: center;
+} */
+
+.user img {
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+/* banner区域 */
+.banner {
+  height: 420px;
+  background-color: #0092cb;
+}
+
+.banner .wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 420px;
+}
+
+/* banner左边 */
+.banner .left {
+  padding: 3px 20px;
+  width: 191px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.banner .left a {
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  background: url(../images/方块.png) no-repeat center right;
+  color: #fff;
+}
+
+.banner .left a:hover {
+  color: #00a4ff;
+  background-image: url(../images/图片.png);
+}
+
+/* banner右边 */
+.banner .right {
+  margin-top: 60px;
+  width: 218px;
+  height: 305px;
+  background-color: #209dd5;
+  border-radius: 10px;
+}
+
+.banner .right h3 {
+  margin-left: 20px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.banner .content {
+  padding: 14px;
+  height: 257px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.banner .content dl {
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.banner .content dt {
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.banner .content dd {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.banner .content a {
+  display: block;
+  height: 32px;
+  background-color: #00a4ff;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* 推荐区域 */
+.recommend .wrapper {
+  display: flex;
+  margin-top: 12px;
+  padding: 0 20px;
+  height: 60px;
+  background-color: #fff;
+  line-height: 60px;
+  box-shadow: 0 1px 2px 0 rgba(211, 211, 211, 0.5);
+}
+
+.recommend h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #00a4ff;
+}
+
+.recommend ul {
+  display: flex;
+  flex: 1;
+}
+
+.recommend li a {
+  padding: 0 20px;
+  font-size: 18px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.recommend li:last-child a {
+  border-right: none;
+}
+
+.recommend .modify {
+  font-size: 16px;
+  color: #00a4ff;
+}
+
+/* 课程区域 */
+.course {
+  margin-top: 15px;
+}
+
+.hd {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 60px;
+}
+
+.hd h3 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.hd .more {
+  padding-right: 30px;
+  font-size: 14px;
+  color: #999;
+  background: url(../images/方块.png) no-repeat center right;
+
+}
+
+.bd ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bd li {
+  margin-bottom: 14px;
+  width: 228px;
+  height: 271px;
+}
+
+.bd .pic {
+  height: 156px;
+}
+
+.bd .text {
+  padding: 20px;
+  height: 115px;
+  background-color: #fff;
+}
+
+.bd .text h4 {
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
+.bd .text p {
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+.bd .text p span {
+  color: #fa6400;
+}
+
+.bd .text p i {
+  font-style: normal;
+}
+
+/* 入门编程 */
+.rumen .hd ul {
+  display: flex;
+}
+
+.rumen .hd li {
+  margin-right: 50px;
+}
+
+.rumen .hd .active {
+  color: #0092cb;
+}
+
+.rumen .bd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rumen .bd .left {
+  width: 228px;
+}
+
+.rumen .bd .right {
+  width: 956px;
+}
+
+.rumen .right .top {
+  margin-bottom: 16px;
+}
+
+/* 底部 */
+.footer {
+  margin-top: 60px;
+  padding-top: 60px;
+  height: 273px;
+  background-color: #fff;
+}
+
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .left {
+  width: 435px;
+}
+
+.footer .left p {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #666;
+}
+
+.footer .right {
+  display: flex;
+
+}
+
+.footer .right dl {
+  margin-right: 130px;
+}
+
+.footer .right dt {
+  margin-bottom: 13px;
+  line-height: 23px;
+  font-size: 16px;
+}
+
+.footer .right a {
+  line-height: 24px;
+  font-size: 14px;
+  color: #666;
+}
