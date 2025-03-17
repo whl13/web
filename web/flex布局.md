@@ -8,82 +8,94 @@
 ## 主轴
 - 主轴就是弹性子元素排列方向
 - 如何设置主轴方向：
-    - flex-direction
+    - `flex-direction`
         - 可选值：
+        ```
             - row 主轴是自左向右水平排列
             - column 主轴是自上向下垂直排列
             - row-reverse 主轴是自右向左水平排列
             - column-reverse 主轴是自下向上垂直排列
+        ```
 - 设置元素是否换行
-    - flex-wrap
+    - `flex-wrap`
         - 可选值：
+        ```
             - nowrap 元素不会自动换行
             - wrap 自动换行
             - wrap-reverse 反向换行
+        ```
 
-- flex-flow：
-    - flex-direction 和 flex-wrap的简写属性
+- `flex-flow`：
+    - `flex-direction` 和 `flex-wrap`的简写属性
         - 可以同时设置两个样式并且没有顺序和数量的要求
 ## 侧轴（辅轴）
 - 侧轴是与主轴垂直方向的轴
 
 ## 对齐方式
-- justify-content 设置元素在主轴上的对齐方式
+- `justify-content` 设置元素在主轴上的对齐方式
     - 可选值：
+    ```
         - start 默认值，元素靠主轴起始位置对齐
         - end 元素靠主轴的结束位置对齐
         - center 沿主轴方向居中对齐
         - space-between 将主轴方向空白位置分配到两个元素之间
         - space-around 将主轴方向空白位置分配到元素周围
         - space-evenly 将主轴方向的空白分配到元素的一侧
-- align-items 设置元素在侧轴上的对齐方式
+    ```
+- `align-items` 设置元素在侧轴上的对齐方式
     - 可选值：
+    ```
         - stretch 拉伸，元素会自动拉伸将侧轴撑满
         - start 元素靠侧轴的起始位置对齐
         - end 元素靠侧轴的结束位置对齐
         - center 元素在侧轴上居中对齐
-- align-content 设置元素在侧轴上空白空间的分配
+    ```
+- `align-content` 设置元素在侧轴上空白空间的分配
     - 可选值：
+    ```
         - space-between 将侧轴方向空白位置分配到两个元素之间
         - space-around 将侧轴方向空白位置分配到元素周围
         - space-evenly 将侧轴方向的空白分配到元素的一侧
+    ```
 
 ## 弹性子元素的样式（弹性项的样式）
-- flex-basis
+- `flex-basis`
     - 弹性子元素的基础大小，会根据主轴的方向自动设置width或height
         - 主轴水平，设置宽度
         - 主轴垂直，设置高度
     - 可选值：
-        - auto 默认值 以元素width或height为准
-- flex-shrink
+        - `auto` 默认值 以元素`width`或`height`为准
+- `flex-shrink`
     - 弹性子元素的收缩系数
         - 当父元素容纳不下所有子元素时，如何自动缩小元素大小
-    - 元素的收缩是根据flex-basis和flex-shrink综合计算的
+    - 元素的收缩是根据`flex-basis`和`flex-shrink`综合计算的
         - 收缩系数越大，元素基础大小越大，元素就缩的越多
     - 默认值为1，可以根据需要设置，如果设置为则表示不收缩
-- flex-grow
+- `flex-grow`
     - 弹性子元素的生长系数
     - 当容器中有富余空间时，如果分配到子元素
     - 默认值0，元素默认不会变大
-- flex
+- `flex`
     - 上述三个属性的简写属性
     - 属性顺序：
-        - grow shrink basis
+        ``- grow shrink basis``
     - 可选值：
+    ```
         - initial 默认值 0 1 auto
         - auto 相当于 1 1 auto
         - none 相当于 0 0 auto
+    ```
 
-- align-self
+- `align-self`
     - 弹性子元素的样式
     - 用来单独设置某个弹性子元素的对齐方式
 
-- order
+- `order`
     - 用来指定弹性子元素的位置
-    - ul>li*5 ul开启flex，给每个li设置order(1到5)
+    - `ul>li*5` `ul`开启`flex`，给每个`li`设置`order(1到5)`
     - 可以任意更改li在主轴上的排列顺序
 
 ## 元素居中的方式：
-    1. 利用margin:0 auto来实现水平居中
+    1. 利用`margin:0 auto`来实现水平居中
     2. 利用定位来实现水平和垂直居中
     3. 利用弹性盒来实现水平和垂直居中
