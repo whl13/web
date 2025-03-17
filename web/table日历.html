@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            position: relative;
+            margin: 10px auto;
+            width: 1000px;
+            height: 700px;
+            display: flow-root;
+            background: url(./images/01.jpg) no-repeat;
+            background-size: cover;
+        }
+        .side{
+            position: absolute;
+            top: 20px;
+            left: 130px;
+            width: 60px;
+            height: 70px;
+            line-height: 70px;
+            background-color: #de2d2d;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+        }
+        table {
+            margin: 20px auto;
+            width: 620px;
+            height: 450px;
+            border-collapse: collapse;
+            background-color: #e9ebf1;
+        }
+        th{
+            height: 30px;
+        }
+        th,td{
+            width: 50px;
+            border: 1px solid rgb(242, 242, 242);
+            text-align: center;
+        }
+        .font-red{
+            color: #aa1212;
+        }
+        .xiu{
+            position: relative;
+            background-color: #efd8e4;
+        }
+        .xiu::after{
+            content: '休';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #de2d2d;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="side">
+            1
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th class="font-red">六</th>
+                    <th class="font-red">日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="xiu">
+                        <h3>1</h3>
+                        <p class="font-red">元旦</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="xiu">
+                        <h3>2</h3>
+                        <p>初五</p>
+                    </td>
+                    <td>
+                        <h3>3</h3>
+                        <p>初六</p>
+                    </td>
+                    <td>
+                        <h3>4</h3>
+                        <p>初七</p>
+                    </td>
+                    <td>
+                        <h3>5</h3>
+                        <p class="font-red">腊八节</p>
+                    </td>
+                    <td>
+                        <h3>6</h3>
+                        <p>初九</p>
+                    </td>
+                    <td>
+                        <h3>7</h3>
+                        <p>初十</p>
+                    </td>
+                    <td>
+                        <h3>8</h3>
+                        <p>十一</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>9</h3>
+                        <p>十二</p>
+                    </td>
+                    <td>
+                        <h3>10</h3>
+                        <p>十三</p>
+                    </td>
+                    <td>
+                        <h3>11</h3>
+                        <p>十四</p>
+                    </td>
+                    <td>
+                        <h3>12</h3>
+                        <p>十五</p>
+                    </td>
+                    <td>
+                        <h3>13</h3>
+                        <p>十六</p>
+                    </td>
+                    <td>
+                        <h3>14</h3>
+                        <p>十七</p>
+                    </td>
+                    <td>
+                        <h3>15</h3>
+                        <p>十八</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>16</h3>
+                        <p>十九</p>
+                    </td>
+                    <td>
+                        <h3>17</h3>
+                        <p>二十</p>
+                    </td>
+                    <td>
+                        <h3>18</h3>
+                        <p>二一</p>
+                    </td>
+                    <td>
+                        <h3>19</h3>
+                        <p>二二</p>
+                    </td>
+                    <td>
+                        <h3>20</h3>
+                        <p class="font-red">小年</p>
+                    </td>
+                    <td>
+                        <h3>21</h3>
+                        <p>二四</p>
+                    </td>
+                    <td>
+                        <h3>22</h3>
+                        <p>二五</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>23</h3>
+                        <p>二六</p>
+                    </td>
+                    <td>
+                        <h3>24</h3>
+                        <p>二七</p>
+                    </td>
+                    <td>
+                        <h3>25</h3>
+                        <p>二八</p>
+                    </td>
+                    <td>
+                        <h3>26</h3>
+                        <p>二九</p>
+                    </td>
+                    <td class="xiu">
+                        <h3>27</h3>
+                        <p class="font-red">除夕</p>
+                    </td>
+                    <td class="xiu">
+                        <h3>28</h3>
+                        <p class="font-red">春节</p>
+                    </td>
+                    <td class="xiu">
+                        <h3>29</h3>
+                        <p>初二</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="xiu">
+                        <h3>30</h3>
+                        <p>初三</p>
+                    </td>
+                    <td class="xiu">
+                        <h3>31</h3>
+                        <p>初四</p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: gray;
+            font: 12px/1.5 PingFang SC,Source Han Sans CN,Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover{
+            color: #f10215;
+        }
+        .container{
+            background-color: #fff;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            height: 36px;
+            width: 1580px;
+            line-height: 36px;
+            margin: 0 auto;
+            border-bottom: .5px solid rgba(0, 0, 0, .06);
+        }
+        .top ul {
+            list-style: none;
+        }
+        .top li{
+            height: 36px;
+            padding: 0 8px;
+            color: #505259;
+            border: transparent .667px solid;
+            border-bottom: none;
+        }
+        .left-ul{
+            display: flex;
+        }
+        .right-ul{
+            display: flex;
+        }
+        .spacer{
+            display: block;
+            width: .5px;
+            height: 8px;
+            margin-top: 14px;
+            background-color: rgba(0, 0, 0, .2);
+        }
+        .red,.xiala:hover{
+            color: #f10215;
+        }
+        .zhankai{
+            position: relative;
+        }
+        .zhankai:hover .xiala{
+            border-color: rgb(240, 240, 240);
+        }
+        .zhankai:hover  .detail{
+            display: block;
+        }
+        .detail{
+            display: none;
+            position: absolute;
+            top: 35.333px;
+            width: 100px;
+            height: 140px;
+            border: rgba(0, 0, 0, .06) 1px solid;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            background-color: #fff;
+            z-index: 999;
+        }
+        .detail li {
+            margin: 10px;
+            width: 80px;
+            padding: 0;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .detail li:first-child{
+            background-color: rgb(255, 15, 35);
+            border-radius: 5px;
+            color: #fff;
+        }
+        .detail li:first-child a:hover{
+            color: #fff;
+        }
+        
+        .icon-xiangxiajiantou{
+            font-size: 6px;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+        .icon-gouwuche{
+            color: #f10215;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <ul class="left-ul">
+                <div class="zhankai">
+                    <li class="xiala"><span>中国大陆版-安徽</span><i class="iconfont icon-xiangxiajiantou"></i></li>
+                    <div class="detail">
+                        <ul>
+                            <li><div><a href="#">中国大陆版</a></div></li>
+                            <li><a href="#">中国台湾版</a></li>
+                            <li><a href="#">中国香港版</a></li>
+                            <li><a href="#">京东全球版</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <li><span class="spacer"></span></li>
+                <li><a href="#"><span>你好,</span><span class="red">请登录</span></a></li>
+                <li><a href="#">免费注册</a></li>
+                <li ><span class="spacer"></span></li>
+                <li><a href="#">切换至企业版</a></li>
+            </ul>
+            <ul class="right-ul">
+                <li><i class="iconfont icon-gouwuche"></i><a href="#">购物车0</a></li>
+                <li><span class="spacer"></span></li>
+                <li><a href="#">我的订单</a></li>
+                <li><span class="spacer"></span></li>
+                <li class="xiala"><a href="#">我的京东</a><i class="iconfont icon-xiangxiajiantou"></i></li>
+                <li><span class="spacer"></span></li>
+                <li class="xiala"><a href="#">企业采购</a><i class="iconfont icon-xiangxiajiantou"></i></li>
+                <li><span class="spacer"></span></li>
+                <li class="xiala"><span class="shop-service">商家服务</span><i class="iconfont icon-xiangxiajiantou"></i></li>
+                <li><span class="spacer"></span></li>
+                <li class="xiala"><span class="shop-service">网站导航</span><i class="iconfont icon-xiangxiajiantou"></i></li>
+                <li><span class="spacer"></span></li>
+                <li class="xiala"><span class="shop-service">手机京东</span><i class="iconfont icon-xiangxiajiantou"></i></li>
+                <li><span class="spacer"></span></li>
+                <li><a href="#">网站无障碍</a></li>
+            </ul>
+    </div>
+    </div>
+</body>
+</html>
