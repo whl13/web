@@ -77,7 +77,7 @@
     - 默认值0，元素默认不会变大
 - `flex`
     - 上述三个属性的简写属性
-    - 属性顺序：` grow shrink basis`
+    - 属性顺序：`grow shrink basis`
     - 可选值：
     ```
         - initial 默认值 0 1 auto
