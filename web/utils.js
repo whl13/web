@@ -6,4 +6,4 @@ function sum(a, b) {
 module.exports = {
   a,
   sum
-}
+}const new = 1const new = 1

@@ -1,0 +1,7 @@
+.log-item {
+    display: flex;
+    height: 70px;
+    background-color: rgb(253, 191, 73);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}

@@ -1,3 +1,6 @@
-const { a, sum } = require('./utils.js');
-console.log(a);
-sum(1, 2);
+const express = require('express')
+const app = express()
+app.listen(3000, () => {
+    console.log('项目启动完成');
+
+})

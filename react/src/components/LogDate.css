@@ -1,0 +1,20 @@
+.log-date {
+    width: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.log-month {
+    line-height: 22px;
+    background-color: rgb(213, 40, 39);
+    color: #fff;
+}
+
+.log-day {
+    line-height: 38px;
+    font-size: 30px;
+}

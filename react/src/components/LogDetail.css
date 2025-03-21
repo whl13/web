@@ -1,0 +1,12 @@
+.log-detail {
+    flex: auto;
+    text-align: center;
+}
+
+.detail-course {
+    line-height: 35px;
+}
+
+.detail-time {
+    color: rgb(213, 40, 39);
+}
